@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reflection</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* --- Base Reset & Colors --- */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --bg-color: #f9f7f2; /* Cream White */
+                --text-color: #3e3b36; /* Deep Warm Grey */
+                --accent-soft: #e6ccb2;
+            }
+
+            body {
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                font-family: "Cormorant Garamond", serif;
+                line-height: 1.6;
+                font-size: 1.3rem;
+                font-weight: 400;
+                overflow-x: hidden;
+
+                /* Layout: Minimal whitespace on sides */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 4vw; /* Minimal side padding */
+                padding-bottom: 100px;
+            }
+
+            /* --- Title Styling --- */
+            .title {
+                margin-top: 50px;
+                text-align: center;
+                opacity: 0;
+                animation: fadeIn 2s ease-out forwards;
+            }
+
+            .title h1 {
+                font-size: 2.5rem;
+                font-weight: 500;
+                letter-spacing: 0.03em;
+                margin-bottom: 0.5rem;
+            }
+
+            .title .author {
+                font-size: 1.2rem;
+                font-weight: 300;
+                font-style: italic;
+                color: #6b6761;
+            }
+
+            /* --- The Artwork Container --- */
+            .artwork-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+                opacity: 0;
+                animation: fadeIn 2.5s ease-out forwards;
+            }
+
+            /* Styling the specific image to fit the aesthetic */
+            .artwork-img {
+                width: 100%;
+                height: auto;
+                max-height: 600px; /* Increased from 400px */
+                object-fit: cover; /* Changed from contain to cover for zoom effect */
+                border-radius: 4px; /* Slight softening of edges */
+            }
+
+            /* --- The Text Content --- */
+            .content {
+                margin-top: 30px; /* Small gap below artwork */
+                width: 100%;
+                max-width: 1600px;
+                text-align: justify;
+                opacity: 0;
+                animation: slideUp 2s ease-out 0.5s forwards;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+                letter-spacing: 0.02em;
+            }
+
+            ::selection {
+                background: var(--accent-soft);
+                color: var(--text-color);
+            }
+
+            /* --- Animations --- */
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(20px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            /* --- Responsive Tweaks --- */
+            @media (max-width: 768px) {
+                body {
+                    padding: 0 5vw;
+                }
+                .content {
+                    text-align: left;
+                    font-size: 1.15rem;
+                }
+                .artwork-img {
+                    max-height: 400px;
+                }
+                .title h1 {
+                    font-size: 2rem;
+                }
+                .title .author {
+                    font-size: 1.1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Freedom of Expression</h1>
+            <div class="author">by Solomon Shalom Lijo</div>
+        </div>
+
+        <div class="artwork-container">
+            <img
+                src="https://i.ibb.co/QvMqbqBK/Result-from-Pixel-Bin.png"
+                alt="Abstract artwork reflecting warmth and love"
+                class="artwork-img"
+            />
+        </div>
+
+        <div class="content">
+            <p>
+                Some of the clearest moments of expression in my life have been
+                quiet ones. They've happened late at night, sitting in front of
+                a screen, rewriting the same few lines of code—not because they
+                were broken, but because something about them didn't feel right.
+                I've learned to trust that feeling. It's usually my reminder
+                that what I'm building belongs to a collective experience and
+                carries consequences beyond me.
+            </p>
+            <p>
+                I express myself most honestly through building. When I code or
+                design systems, I'm not just solving problems; I'm thinking
+                about people—who will use this, who might struggle with it, and
+                who might be left out entirely. Each project becomes a small act
+                of translation, turning care into structure and intention into
+                design. That instinct is rooted in a principle I've carried with
+                me for years: to love your neighbor as yourself—not as an
+                abstract idea, but as a daily responsibility and a form of
+                stewardship over the systems we share.
+            </p>
+            <p>
+                Reflection is the other place my voice shows up. I notice how
+                environments shape behavior—how a classroom feels safer when
+                someone listens, or how a single word can invite participation
+                or quietly shut it down. These observations stay with me,
+                guiding how I lead, collaborate, and take on the mantle of
+                responsibility when building with and for others.
+            </p>
+            <p>
+                Freedom of expression, to me, isn't about being the loudest
+                voice in the room. It's about having the freedom to pause, to
+                revise, and to grow without losing honesty. It's about choosing
+                responsibility over convenience and curiosity over certainty,
+                especially when what we build affects more than ourselves.
+            </p>
+            <p>
+                I'm drawn to communities that understand expression this way—not
+                as performance, but as presence. Places where individuality is
+                trusted and the collective good is taken seriously. That's where
+                I feel most myself: building carefully, listening closely, and
+                carrying the mantle of stewardship with humility and care.
+            </p>
+        </div>
+    </body>
+</html>
