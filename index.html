@@ -40,7 +40,7 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 0 4vw; /* Minimal side padding */
-                padding-bottom: 100px;
+                padding-bottom: 60px;
             }
 
             /* --- Title Styling --- */
@@ -100,6 +100,29 @@
                 letter-spacing: 0.02em;
             }
 
+            /* --- Footer Link --- */
+            .footer {
+                margin-top: 40px;
+                text-align: center;
+                opacity: 0;
+                animation: fadeIn 2s ease-out 1s forwards;
+            }
+
+            .footer a {
+                color: var(--text-color);
+                text-decoration: none;
+                font-size: 1.1rem;
+                font-weight: 300;
+                border-bottom: 1px solid var(--text-color);
+                padding-bottom: 2px;
+                transition: all 0.3s ease;
+            }
+
+            .footer a:hover {
+                color: #6b6761;
+                border-bottom-color: #6b6761;
+            }
+
             ::selection {
                 background: var(--accent-soft);
                 color: var(--text-color);
@@ -140,6 +163,9 @@
                 }
                 .title .author {
                     font-size: 1.1rem;
+                }
+                .footer a {
+                    font-size: 1rem;
                 }
             }
         </style>
@@ -201,6 +227,10 @@
                 I feel most myself: building carefully, listening closely, and
                 carrying the mantle of stewardship with humility and care.
             </p>
+        </div>
+
+        <div class="footer">
+            <a href="https://github.com/solomonshalom/freedom-of-expression" target="_blank" rel="noopener noreferrer">View Source Code</a>
         </div>
     </body>
 </html>
